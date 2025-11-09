@@ -119,6 +119,18 @@ header p {
   color: #000;
 }
 
+.contact a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 5px;
+  transition: color 0.3s ease;
+}
+
+.contact a:hover {
+  color: #c1975b; /* a touch of gold for elegance */
+}
+
 .contact .copyright {
   margin-top: 25px;
   font-size: 0.9em;
