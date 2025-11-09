@@ -1,153 +1,103 @@
-/* === GENERAL === */
 body {
-  font-family: "Poppins", Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
-  padding: 0;
-  background-color: #f8f8f8;
-  color: #333;
-}
-
-/* === HEADER === */
-header {
-  background-color: #000;
-  color: white;
-  text-align: center;
-  padding: 80px 20px;
-}
-
-header h1 {
-  font-size: 2.8em;
-  margin-bottom: 10px;
-}
-
-header p {
-  font-size: 1.2em;
-  color: #ccc;
-}
-
-/* === COLLECTION === */
-.collection {
-  text-align: center;
-  padding: 60px 20px;
-}
-
-.collection h2 {
-  font-size: 2em;
-  margin-bottom: 40px;
+  background-color: #fff;
   color: #222;
+  text-align: center;
 }
 
-.items {
+header {
+  background: black;
+  color: white;
+  padding: 2rem 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.6rem;
+  color: #222;
+  margin-top: 1.5rem;
+}
+
+section {
+  padding: 2rem 1rem;
+}
+
+/* --- ABOUT SECTION --- */
+.about {
+  background-image: url('about-bg.jpeg'); /* Upload your chosen perfume image and rename it to this */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  position: relative;
+  height: 300px;
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
-  gap: 25px;
+  text-align: center;
+}
+
+.about::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6); /* Dark overlay for readability */
+}
+
+.about .overlay {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  padding: 1rem;
+}
+
+.about h2 {
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.about p {
+  line-height: 1.6;
+  color: #eee;
+}
+
+/* --- COLLECTION --- */
+.collection .items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
 }
 
 .item {
-  background-color: #fff;
-  border-radius: 16px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  width: 300px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  padding-bottom: 1rem;
 }
 
 .item img {
   width: 100%;
-  height: 350px;
+  height: 250px;
   object-fit: cover;
+  display: block;
 }
 
 .item p {
-  font-size: 1.1em;
+  margin-top: 1rem;
   font-weight: 500;
-  padding: 15px;
-  background-color: #fff;
-  color: #333;
-}
-
-/* === ABOUT === */
-.about {
-  background-color: #fff;
-  text-align: center;
-  padding: 60px 25px;
-  margin-top: 40px;
-}
-
-.about h2 {
-  font-size: 2em;
   color: #222;
-  margin-bottom: 20px;
 }
 
-.about p {
-  max-width: 600px;
-  margin: 0 auto;
-  font-size: 1.1em;
-  line-height: 1.6;
-  color: #555;
-}
-
-/* === CONTACT === */
+/* --- CONTACT --- */
 .contact {
-  background-color: #f4f4f4;
-  text-align: center;
-  padding: 60px 25px;
-  margin-top: 40px;
-  border-top: 1px solid #ddd;
-}
-
-.contact h2 {
-  font-size: 2em;
-  color: #222;
-  margin-bottom: 25px;
-}
-
-.contact p {
-  font-size: 1.1em;
-  color: #444;
-  margin: 8px 0;
-}
-
-.contact strong {
-  color: #000;
-}
-
-.contact a {
-  color: #000;
-  text-decoration: none;
-  font-weight: 500;
-  margin-left: 5px;
-  transition: color 0.3s ease;
-}
-
-.contact a:hover {
-  color: #c1975b; /* a touch of gold for elegance */
-}
-
-.contact .copyright {
-  margin-top: 25px;
-  font-size: 0.9em;
-  color: #666;
-}
-
-/* === MOBILE === */
-@media (max-width: 768px) {
-  header h1 {
-    font-size: 2.2em;
-  }
-
-  .item {
-    width: 90%;
-  }
-
-  .item img {
-    height: 280px;
-  }
+  background: black;
+  color: white;
+  padding: 2rem 1rem;
+  font-size: 0.95rem;
 }
